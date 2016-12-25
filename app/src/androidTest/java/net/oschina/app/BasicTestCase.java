@@ -35,11 +35,8 @@ public class BasicTestCase extends ActivityInstrumentationTestCase2<AppStart> {
             logCurrentCaseName();
             solo1 = new Solo(getInstrumentation(), getActivity());
             solo = new SoloWrap(solo1);
-//            Log.i("AUTO","============================1");
-//            int a= 0;
-//            int b = 3/a;
             pageHelper = new PageHelper(solo);
-            solo.clickOnText("我的");
+            pageHelper.getPageNavigation().clickMyTab();
             if (isNeedLogin) {
                 if (!pageHelper.getPageMyLoginStatus().isAlreadyLogin()) {
                     pageHelper.getPageMyUnLoginStatus().clickLoginIcon();
