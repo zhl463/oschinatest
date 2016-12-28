@@ -12,6 +12,7 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 import net.oschina.app.com.oschina.FinalTest;
+import net.oschina.app.com.oschina.FinalTest01;
 import net.oschina.app.com.oschina.testsuites.SuiteLogin;
 import net.oschina.app.com.oschina.testsuites.SuiteNews;
 
@@ -27,17 +28,17 @@ import java.util.List;
 /**
  * Created by Aaron on 2016/11/27.
  */
-public class Runner2 extends CustomRunner{
+public class Runner2 extends CommonRunner{
 
 
     @Override
     public TestSuite getAllTests() {
         TestSuite suite = new TestSuite();
         suite.addTest(SuiteLogin.getLoginSuite());
-        suite.addTestSuite(FinalTest.class);
-//        if(isNeedRegenerate){
-//            suite = regenerateTestSuite(suite);
-//        }
+        suite.addTestSuite(FinalTest01.class);
+        if(reGenerate){
+            suite = regenerateTestSuite(suite);
+        }
         return  suite;
     }
 
