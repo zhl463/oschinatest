@@ -23,11 +23,20 @@ public class BasicTestCase extends ActivityInstrumentationTestCase2<AppStart> {
     private SoloWrap solo;
 
 
-    public BasicTestCase(boolean isNeedLogin) {
+    public BasicTestCase() {
         super(AppStart.class);
-        this.isNeedLogin = isNeedLogin;
+//        this.isNeedLogin = isNeedLogin;
     }
 
+    public void setUp(Boolean isNeedLogin){
+        this.isNeedLogin=isNeedLogin;
+        try {
+            super.setUp();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        this.isNeedLogin = isNeedLogin;
+    }
     @Override
     public void setUp() throws Exception {
         try {
