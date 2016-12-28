@@ -12,7 +12,6 @@ import java.util.Random;
 public class Cross2 extends BasicTestCase {
 
     public Cross2(){
-        super(false);
     }
 
     public void testCross(){
