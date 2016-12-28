@@ -25,7 +25,6 @@ public class BasicTestCase extends ActivityInstrumentationTestCase2<AppStart> {
 
     public BasicTestCase() {
         super(AppStart.class);
-//        this.isNeedLogin = isNeedLogin;
     }
 
     public void setUp(Boolean isNeedLogin){
