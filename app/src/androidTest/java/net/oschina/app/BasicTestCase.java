@@ -34,7 +34,6 @@ public class BasicTestCase extends ActivityInstrumentationTestCase2<AppStart> {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        this.isNeedLogin = isNeedLogin;
     }
     @Override
     public void setUp() throws Exception {
