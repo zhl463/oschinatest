@@ -1,12 +1,15 @@
 package net.oschina.app;
+
 import junit.framework.TestSuite;
 
 import net.oschina.app.com.oschina.FinalTest;
 import net.oschina.app.com.oschina.testsuites.SuiteLogin;
+
 /**
  * Created by Aaron on 2016/11/27.
  */
-public class Runner2 extends CommonRunner{
+public class Runner12 extends CommonRunner1 {
+
 
     @Override
     public TestSuite getAllTests() {
@@ -14,7 +17,7 @@ public class Runner2 extends CommonRunner{
         suite.addTest(SuiteLogin.getLoginSuite());
         suite.addTestSuite(FinalTest.class);
         if(reGenerate){
-            suite =  generateNewSuite(suite);
+            suite = regenerateTestSuite(suite);
         }
         return  suite;
     }

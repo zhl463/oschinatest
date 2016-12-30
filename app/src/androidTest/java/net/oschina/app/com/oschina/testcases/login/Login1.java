@@ -14,9 +14,6 @@ import net.oschina.app.BasicTestCase;
  */
 public class Login1 extends BasicTestCase{
 
-    public Login1(){
-        super(false);
-    }
 
     public void testLogin1(){
 //        assertFalse(true);

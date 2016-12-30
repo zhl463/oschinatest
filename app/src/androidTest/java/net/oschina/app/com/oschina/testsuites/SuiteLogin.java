@@ -13,9 +13,9 @@ public class SuiteLogin {
 
     public static TestSuite getLoginSuite(){
         TestSuite suite = new TestSuite();
-        suite.addTestSuite(Login2.class);
-        //suite.addTestSuite(Login4.class);
         suite.addTestSuite(Login1.class);
+        suite.addTestSuite(Login4.class);
+        suite.addTestSuite(Login2.class);
         return suite;
     }
 

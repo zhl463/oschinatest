@@ -7,10 +7,6 @@ import net.oschina.app.BasicTestCase;
  */
 public class Login4 extends BasicTestCase{
 
-    public Login4(){
-        super(false);
-    }
-
     public  void testCrash(){
         android.os.Process.killProcess(android.os.Process.myPid());
     }

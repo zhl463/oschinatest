@@ -15,8 +15,8 @@ import net.oschina.app.BasicTestCase;
  */
 public class Login2 extends BasicTestCase{
 
-    public Login2(){
-        super(true);
+    public void setUp(Boolean isNeedLogin){
+        super.setUp(true);
     }
 
     public void testLogin2(){

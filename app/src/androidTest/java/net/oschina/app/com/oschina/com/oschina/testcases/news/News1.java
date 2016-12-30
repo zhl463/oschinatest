@@ -7,10 +7,6 @@ import net.oschina.app.BasicTestCase;
  */
 public class News1 extends BasicTestCase{
 
-    public News1(){
-        super(false);
-    }
-
     public void testLogin1(){
         pageHelper.getPageNavigation().clickMyTab();
         pageHelper.getPageMyUnLoginStatus().clickLoginIcon();

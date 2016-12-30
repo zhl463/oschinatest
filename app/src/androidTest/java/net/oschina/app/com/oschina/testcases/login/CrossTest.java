@@ -8,9 +8,6 @@ import net.oschina.app.com.oschina.Utils;
  */
 public class CrossTest extends BasicTestCase {
 
-    public CrossTest(){
-        super(false);
-    }
 
     public void testCross(){
         pageHelper.getPageCommon().clickOnText("为什么有些程序员宁愿降薪也要离开创业公司\\？");

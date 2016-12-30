@@ -5,21 +5,19 @@ import android.os.Environment;
 import net.oschina.app.BasicTestCase;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 
 /**
- * Created by Aaron on 2016/11/29.
- */
-public class FinalTest extends BasicTestCase{
+ * Created by Aaron on 2016/12/25.
+ */;
+public class FinalTest extends BasicTestCase {
 
-    public FinalTest(){
-        super(false);
-        File file = new File(Environment.getExternalStorageDirectory()+"/crash.txt");
-        if(file.exists()){
-            file.delete();
+    public void testFinal(){
+        File fr = null;
+        fr = new File(Environment.getExternalStorageDirectory()+"/crash.txt");
+        if(fr.exists()){
+            fr.delete();
         }
-    }
-
-    public void testFinalTest(){
-
     }
 }

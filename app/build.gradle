@@ -78,26 +78,26 @@ android {
         oschina {
             manifestPlaceholders = [UMENG_CHANNEL: "oschina"]
         }
-
-        google {
-            manifestPlaceholders = [UMENG_CHANNEL: "google"]
-        }
-
-        tencent {
-            manifestPlaceholders = [UMENG_CHANNEL: "tentcent"]
-        }
-
-        wandoujia {
-            manifestPlaceholders = [UMENG_CHANNEL: "wandoujia"]
-        }
-
-        xiaomi {
-            manifestPlaceholders = [UMENG_CHANNEL: "xiaomi"]
-        }
-
-        huawei {
-            manifestPlaceholders = [UMENG_CHANNEL: "huawei"]
-        }
+//
+//        google {
+//            manifestPlaceholders = [UMENG_CHANNEL: "google"]
+//        }
+//
+//        tencent {
+//            manifestPlaceholders = [UMENG_CHANNEL: "tentcent"]
+//        }
+//
+//        wandoujia {
+//            manifestPlaceholders = [UMENG_CHANNEL: "wandoujia"]
+//        }
+//
+//        xiaomi {
+//            manifestPlaceholders = [UMENG_CHANNEL: "xiaomi"]
+//        }
+//
+//        huawei {
+//            manifestPlaceholders = [UMENG_CHANNEL: "huawei"]
+//        }
     }
 }
 
