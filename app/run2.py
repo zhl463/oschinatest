@@ -11,8 +11,8 @@ if os.path.exists("total.txt"):
 os.system("adb shell rm -rf sdcard/crash.txt")
 os.system("adb uninstall net.oschina.app")
 os.system("adb uninstall net.oschina.app.test")
-os.system("gradle assembleDebug")
-os.system("gradle assembleAndroidTest")
+#os.system("gradle assembleDebug")
+#os.system("gradle assembleAndroidTest")
 os.system("adb install .\\build\\outputs\\apk\\debug\\osc-android-v2.6.9(1609281026)-oschina-debug.apk")	
 os.system("adb install .\\build\\outputs\\apk\\app-oschina-debug-androidTest.apk")
 re_run=True
