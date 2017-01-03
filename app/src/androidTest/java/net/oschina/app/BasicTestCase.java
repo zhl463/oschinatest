@@ -27,6 +27,10 @@ public class BasicTestCase extends ActivityInstrumentationTestCase2<AppStart> {
         super(AppStart.class);
     }
 
+    /**
+     * 默认不需要登录。当需要登录时直接调用该函数  public void setUp(Boolean isNeedLogin){super.setUp(true);}
+     * @param isNeedLogin
+     */
     public void setUp(Boolean isNeedLogin){
         this.isNeedLogin=isNeedLogin;
         try {
@@ -39,7 +43,7 @@ public class BasicTestCase extends ActivityInstrumentationTestCase2<AppStart> {
     public void setUp() throws Exception {
         try {
             super.setUp();
-            logCurrentCaseName();
+            logCurrentCaseName();//获得当前运行类名
             solo1 = new Solo(getInstrumentation(), getActivity());
             solo = new SoloWrap(solo1);
             pageHelper = new PageHelper(solo);
@@ -92,6 +96,9 @@ public class BasicTestCase extends ActivityInstrumentationTestCase2<AppStart> {
         }
     }
 
+    /**
+     * 把当前运行的类名写入crash.txt文件中
+     */
     private void logCurrentCaseName() {
         FileWriter fw = null;
         try {
