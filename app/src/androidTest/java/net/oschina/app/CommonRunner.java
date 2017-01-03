@@ -29,6 +29,14 @@ public class CommonRunner extends JUnitReportTestRunner {
         super.onCreate(arguments);
     }
 
+    /**
+     * 判断是否需要重新组装测试用例。
+     * 获取原始的测试用例集，逐一判断是否与崩溃的测试用例相同，若相同则进入重新组装流程
+     * public void addTestSuite(Class<? extends TestCase> testClass)通过java的Class.forName
+     *
+     * @param suite
+     * @return
+     */
     public TestSuite generateNewSuite(TestSuite suite) {
         TestSuite newSuite = new TestSuite();
         String crashCaseName = getCrashName();
@@ -51,6 +59,12 @@ public class CommonRunner extends JUnitReportTestRunner {
         return newSuite;
     }
 
+    /**
+     * 获取用例名。分为TestSuite和Test两种。遍历获取
+     * 把获得到的用例加入List<String>中。在最后一个用例加上FinalTest（记得要全路径）
+     * @param suite
+     * @return
+     */
     public List<String> getCaseNames(TestSuite suite) {
         List<String> cases = new ArrayList<>();
         for( int i=0; i < suite.testCount(); i++){
@@ -64,6 +78,11 @@ public class CommonRunner extends JUnitReportTestRunner {
         return cases;
     }
 
+    /**
+     * 获取发生崩溃的用例名
+     * 
+     * @return
+     */
     public String getCrashName() {
         String name = "";
         FileReader fr = null;
