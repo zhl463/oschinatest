@@ -80,7 +80,7 @@ public class CommonRunner extends JUnitReportTestRunner {
 
     /**
      * 获取发生崩溃的用例名
-     * 
+     *
      * @return
      */
     public String getCrashName() {
